@@ -153,3 +153,24 @@ void Matrice::set(int row,int column,float value)
     }
 }
 
+float* Matrice::get(int row){
+    if(row <= this->row){
+        float* resultat = (float*)malloc(this->column*sizeof(float));
+        for(int i=0;i<this->row;i++){
+            resultat[i] = this->data[row][i];
+        }
+        return resultat;
+    }
+}
+
+float* Matrice::get_column(int column){
+    if(column <= this->column){
+        float* resultat = (float*)malloc(this->column*sizeof(float));
+        for(int i =0;i<row;i++){
+            resultat[i] = this->data[i][column];
+        }
+        return resultat;
+    }
+
+}
+

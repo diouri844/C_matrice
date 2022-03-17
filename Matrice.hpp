@@ -19,6 +19,8 @@ public:
     void set(int row,int column,float value);
     // surcharge methodes:
     void show(int row,int column);
+    float* get(int row);
+    float* get_column(int column);
     float max(int row);
     float min(int row);
 };
