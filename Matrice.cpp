@@ -174,3 +174,39 @@ float* Matrice::get_column(int column){
 
 }
 
+void Matrice::sort()
+{
+    for(int row_count=0;row_count<this->row;row_count++)
+    {
+        for(int column_count=0;column_count<this->column;column_count++)
+        {
+            for(int column_count=0;column_count<this->column-1;column_count++)
+            {
+            if(this->data[row_count][column_count]>this->data[row_count][column_count+1])
+                {
+                    float temp = this->data[row_count][column_count];
+                    this->data[row_count][column_count] = this->data[row_count][column_count+1];
+                    this->data[row_count][column_count+1] = temp;
+                }
+            }
+        }
+    }
+    return;
+}
+
+Matrice Matrice::extract(int row,int column)
+{   
+    if(row <= this->row && column <= this->column)
+    {
+        Matrice resultat = Matrice(row,column);
+        for(int r=0;r<row;r++)
+        {
+            for(int c=0;c<column;c++)
+            {
+                resultat.set(r,c,this->data[r][c]);
+            }
+        }
+
+        return resultat;
+    }
+}

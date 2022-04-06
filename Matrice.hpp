@@ -15,6 +15,8 @@ public:
     void  show();
     float max();
     float min();
+    void sort();
+    Matrice extract(int row,int column);
     float get(int row,int column);
     void set(int row,int column,float value);
     // surcharge methodes:
