@@ -15,6 +15,7 @@ public:
     void  show();
     float max();
     float min();
+    float sum();
     void sort();
     Matrice extract(int row,int column);
     float get(int row,int column);
@@ -25,6 +26,7 @@ public:
     float* get_column(int column);
     float max(int row);
     float min(int row);
+    float sum(int row);
 };
 
 

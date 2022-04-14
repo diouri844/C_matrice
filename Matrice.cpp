@@ -210,3 +210,29 @@ Matrice Matrice::extract(int row,int column)
         return resultat;
     }
 }
+
+float Matrice::sum()
+{
+    float resultat = 0.0;
+    for(int i=0;i<this->row;i++)
+    {
+        for(int j=0;j<this->column;j++)
+        {
+            resultat += this->data[i][j];
+        }
+    }
+    return resultat;
+}
+
+float Matrice::sum(int row)
+{
+    if(row <= this->row)
+    {
+        float resultat;
+        for(int i=0;i<this->column;i++)
+        {
+            resultat += this->data[row][i];
+        }
+        return resultat;
+    }
+}

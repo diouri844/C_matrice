@@ -33,5 +33,6 @@ int main(){
     printf("\n \n extract som rows :    ");
     Matrice extract = M1.extract(1,3);
     extract.show();
+    printf("\n \n etxract sum  :   %.2f ",extract.sum());
     return 0;
 }
